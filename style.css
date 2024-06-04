@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ShareMenu_Container {
+    background: hsl(217, 19%, 35%);
+    padding: 1rem 2.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+}
+
+.ShareMenu_Container:before {
+    content: "";
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-top: 12px solid hsl(217, 19%, 35%);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    position: absolute;
+    top: 100%;
+    left: 6.5rem;
+}
+
+.ShareMenu_Container > span, .ShareMenu_Container > svg {
+    margin-right: 1rem;
+}
+
+.ShareMenu_Container:last-child {
+    margin-right: 2rem;
+    background: red;
+}
