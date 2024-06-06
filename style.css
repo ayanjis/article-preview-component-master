@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 *,
 *::before,
 *::after {
@@ -15,46 +17,90 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: hsl(210, 46%, 95%);
 }
 
 
 .Article_preview_component {
     display: flex;
-    background: #affdf0;
+    background: #fff;
     margin: 2rem;
     max-width: 50rem;
     border-radius: 14px;
+    scale: .9;
 }
 
 .Article_Container {
     padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Article_Container>h1,
+.Article_Container>p {
+    margin-bottom: 1rem;
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: hsl(217, 19%, 35%);
+}
+
+.Article_Container>p {
+    color: hsla(217, 19%, 35%, 0.705);
+}
+
+.Profile_Info > h1, .Profile_Info > p {
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 80%;
+}
+
+.Profile_Info > p { 
+    color: hsla(217, 19%, 35%, 0.705);  
+}
+
+.Article_Container>h1 {
+    font-size: 130%;
+}
+
+.Article_Container> p {
+    font-size: 93%;
 }
 
 .Img_Drawers {
     min-width: 20rem;
 }
 
-.Img_Drawers > img {
-    height: 100%;    
+.Img_Drawers>img {
+    height: 100%;
     border-top-left-radius: 14px;
     border-bottom-left-radius: 14px;
 }
 
 .Profile_Image {
     width: 2.5rem;
+    margin-right: 1rem;
 }
 
-.Profile_Image > img {
+.Profile_Image>img {
     border-radius: 50%;
 }
 
-.Img_Drawers > img, .Profile_Image > img{
+.Img_Drawers>img,
+.Profile_Image>img {
     width: 100%;
     object-fit: fill;
 }
 
 .Profile_Container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Profile_Items {
+    display: flex;
+    align-items: center;
 }
 
 .ShareMenu_Container {
@@ -66,6 +112,8 @@ body {
     border-radius: 10px;
     color: #fff;
     position: relative;
+    bottom: 5rem;
+    opacity: 0;
 }
 
 .ShareMenu_Container:before {
@@ -77,8 +125,8 @@ body {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     position: absolute;
-    top: 100%;
-    left: 6.5rem;
+    top: 99.5%;
+    left: 7rem;
 }
 
 .ShareMenu_Container>span,
@@ -86,7 +134,37 @@ body {
     margin-right: 1rem;
 }
 
-.ShareMenu_Container:last-child {
-    margin-right: 2rem;
-    background: red;
+.ShareMenu_Container>span {
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 90%;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+.Share_Container {
+    width: 2rem;
+    height: 2rem;
+    background: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Share_Icon {
+    position: relative;
+    bottom: 2.8rem;
+}
+
+.Share_Container:active {
+    background: rgb(110, 128, 152);
+}
+
+.Share_Icon > svg {
+    color: #ecf2f8;
+}
+
+.Share_Container:hover + .Share_Container {
+    opacity: 1;
 }
