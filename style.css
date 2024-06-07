@@ -114,6 +114,7 @@ body {
     position: relative;
     bottom: 5rem;
     opacity: 0;
+    transition: opacity .3s;
 }
 
 .ShareMenu_Container:before {
@@ -161,10 +162,48 @@ body {
     background: rgb(110, 128, 152);
 }
 
-.Share_Icon > svg {
-    color: #ecf2f8;
+.Share_Container:active .ShareMenu_Container {
+    opacity: 1;
 }
 
-.Share_Container:hover + .Share_Container {
-    opacity: 1;
+.Share_Container:active .Share_Icon > svg > path {
+    fill: #ecf2f8;
+}
+
+@media (max-width: 375px) {
+    .Article_preview_component {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .Article_Container {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .Img_Drawers>img {
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .Img_Drawers {
+        min-width: 19rem;
+        height: 19rem;
+    }
+
+    .Article_Container>h1 {
+        font-size: 91%;
+    }
+
+    .Article_Container> p {
+        font-size: 72%;
+        margin-bottom: 2rem;
+    }
+
+    .Share_Icon:active + .Profile_Items {
+        /* display: none; */
+        background: red;
+    }
 }
